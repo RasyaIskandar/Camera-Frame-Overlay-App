@@ -271,7 +271,17 @@ const Preview: React.FC<{
   image: string; 
   onRetry: () => void; 
   frame: FrameType 
-}> = ({ image, onRetry, frame }) => {
+}> = ({ image, onRetry }) => {
+
+  const handleDownload = () => {
+    const filename = `photo-${Date.now()}.png`; // dibuat di event handler
+
+    const link = document.createElement("a");
+    link.href = image;
+    link.download = filename;
+    link.click();
+  };
+
   return (
     <motion.div 
       className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm"
@@ -307,21 +317,21 @@ const Preview: React.FC<{
             Ulangi
           </motion.button>
 
-          <motion.a
+          <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            href={image}
-            download={`photo-${Date.now()}.png`}
+            onClick={handleDownload}
             className="flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full font-bold shadow-lg hover:shadow-blue-500/30 transition-all"
           >
             <Download size={20} />
             Simpan Foto
-          </motion.a>
+          </motion.button>
         </div>
       </div>
     </motion.div>
   );
 };
+
 
 // ================= MAIN APP ==================
 export default function Page() {
