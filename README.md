@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+📸 Camera Frame Overlay App
 
-## Getting Started
+Aplikasi web untuk mengambil foto menggunakan kamera dengan overlay frame PNG khusus. Dibangun menggunakan Next.js + React + TypeScript + Tailwind CSS, aplikasi ini memudahkan pengguna untuk membuat foto ber-frame secara instan tanpa aplikasi tambahan.
 
-First, run the development server:
+🚀 Fitur Utama
 
-```bash
+Pilih bingkai foto:
+
+Portrait (9:16)
+
+Landscape (16:9)
+
+Kamera otomatis menyesuaikan rasio tampilan
+
+Frame PNG tampil langsung di atas kamera
+
+Hasil foto sudah menyatu dengan frame
+
+Preview sebelum download
+
+Download hasil foto dalam format PNG
+
+📂 Struktur Folder
+/public
+  /frames
+    frame-portrait.png
+    frame-landscape.png
+
+/app
+  page.tsx   ← file utama berisi logika kamera & frame
+
+🛠️ Cara Install & Menjalankan
+
+Clone repo:
+
+git clone https://github.com/USERNAME/NAMA-REPO.git
+
+
+Masuk folder project:
+
+cd NAMA-REPO
+
+
+Install dependencies:
+
+npm install
+
+
+Jalankan development server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Buka browser dan akses:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+http://localhost:3000
 
-## Learn More
+📦 Build Project
+npm run build
+npm start
 
-To learn more about Next.js, take a look at the following resources:
+📁 Tambah / Ganti Frame
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Masukkan file frame PNG kamu ke:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+/public/frames/
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Dengan nama:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+frame-portrait.png
+
+frame-landscape.png
+
+Pastikan resolusi frame sesuai dengan rasio:
+
+Portrait → 9:16
+
+Landscape → 16:9
+
+🧩 Teknologi yang Digunakan
+
+Next.js
+
+React
+
+TypeScript
+
+Tailwind CSS
+
+Browser MediaDevices API
+
+HTML Canvas API
+
+🧑‍💻 Kontribusi
+
+Pull request sangat diterima.
+
+📜 Lisensi
+
+Project ini menggunakan lisensi MIT.
